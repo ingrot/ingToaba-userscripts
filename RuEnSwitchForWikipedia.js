@@ -21,6 +21,7 @@
     var langRU = "RUSSIAN";
     var langEN = "ENGLISH";
     var windOpenPlace = "_self";
+    var bZIndex = "500";
 
     var elms = document.getElementsByClassName(elmClass);
     function findLangLink(parClass) {
@@ -38,6 +39,7 @@
             b.style.position = "fixed";
             b.style.top = "10px";
             b.style.left = left_;
+            b.style.zIndex = bZIndex;
             b.onclick = function() { window.open(href_, windOpenPlace) };
             parent_.appendChild(b);
     }
