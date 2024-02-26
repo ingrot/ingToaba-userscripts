@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RuEnSwitchForWikipedia
-// @version      0.1
-// @description  Fixed Russian/English buttons to change /bw langs
+// @version      0.2
+// @description  Fixated Russian/English buttons to change /bw langs
 // @author       me
 // @match        *.wikipedia.org/wiki/*
 // @grant        none
