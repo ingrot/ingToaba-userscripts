@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         RuEnSwitchForWikipedia
-// @version      0.2
+// @version      0.3
 // @description  Fixated Russian/English buttons to change /bw langs
-// @author       me
+// @author       arnak-soft
 // @match        *.wikipedia.org/wiki/*
 // @grant        none
 // ==/UserScript==
@@ -12,10 +12,12 @@
     // PREPARE
 
     var elmClass = "interlanguage-link-target";
-    //var parClassRu = "interlanguage-link interwiki-ru";
-    //var parClassEn = "interlanguage-link interwiki-en";
-    var parClassRu = "interlanguage-link interwiki-ru mw-list-item";
-    var parClassEn = "interlanguage-link interwiki-en mw-list-item";
+    var parClassRu = "interwiki-ru";
+    var parClassEn = "interwiki-en";
+    // var parClassRu = "interlanguage-link interwiki-ru";
+    // var parClassEn = "interlanguage-link interwiki-en";
+    // var parClassRu = "interlanguage-link interwiki-ru mw-list-item";
+    // var parClassEn = "interlanguage-link interwiki-en mw-list-item";
     var ElmRu;
     var ElmEn;
     var langRU = "RUSSIAN";
@@ -26,7 +28,8 @@
     var elms = document.getElementsByClassName(elmClass);
     function findLangLink(parClass) {
         for (var i = 0; i < elms.length; i++) {
-            if (elms.item(i).parentElement.className == parClass) {
+            // if (elms.item(i).parentElement.className == parClass) {
+            if (elms.item(i).parentElement.classList.contains(parClass)) {
                 //Elm = elms.item(i);
                 return elms.item(i);
             }
